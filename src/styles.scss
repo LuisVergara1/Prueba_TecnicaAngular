@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 80%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.checkbox-container {
+    display: flex;
+
+    .checkbox {
+      margin-right: 1%; // Espacio entre los checkboxes
+    }
+  }
+  
+  /* Cambiar el color del texto a negro */
+  .mat-checkbox-label {
+    color: black; 
+    margin-right: 5px;
+  }
+  .mdc-label{
+    color:rgb(0, 0, 0);
+    margin-right: 5px;
+  }
+  .mat-mdc-checkbox{
+    background-color: #e0e0e0; // Color de fondo cuando está seleccionado
+    border: 2px solid #000;
+    border-radius: 10%;
+    padding :5px
+  }
+
+  .mat-typography{
+    background-color: rgba(218, 218, 218, 0.89);
+  }
+
+  .numberSearch {
+    /* Estilos personalizados */
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    border: 1px solid #ccc; /* Borde gris */
+    margin-bottom: 10px;
+    padding: 2px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 50px; /* Ancho del input */
+    box-sizing: border-box; /* La propiedad box-sizing incluye el borde y el padding en el ancho y alto total */
+  }
+  

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column; /* Mostrar los elementos en columna */
+  height: 20vh; /* Altura completa de la ventana */
+  border: 2px black solid;
+  box-sizing: border-box;
+  width: 20%;
+  margin: auto;
+  
+}
+h1{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.containerListar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column; /* Mostrar los elementos en columna */ /* Altura completa de la ventana */
+  border: 2px black solid;
+  box-sizing: border-box;
+  width: 40%;
+  margin: auto;
+  
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: 2px solid;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+}

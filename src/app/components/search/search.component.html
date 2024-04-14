@@ -1,0 +1,61 @@
+<div class="table-container">
+<H1>Busqueda Con Filtros </H1>
+<div class="search-container">
+  <div class="checkbox-container">
+    <div *ngFor="let filter of filters" class="checkbox">
+      <mat-checkbox [(ngModel)]="selectedFilters[filter]">{{ filter }}</mat-checkbox>
+    </div>
+  </div>
+<div class="input-group">
+  <H4>N° de Features por pagina min:1 max 12</H4>
+    <input class="numberSearch" matInput type="number" placeholder="Respuestas por página" [(ngModel)]="perPage" min="1" max="12">
+    <button mat-raised-button color="primary" (click)="nuevaBusqueda()">Buscar Por Filtros</button>
+</div>
+<div class="input-group">
+  <H4>Buscar por Id o external_id</H4>
+    <input class="idSearch" matInput type="string" placeholder="Ingresa id o External id" [(ngModel)]="searchId" >
+    <button mat-raised-button color="primary" (click)="busquedaID()">Buscar Por ID </button>
+</div> 
+
+</div>
+<table *ngIf="showTable" >
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>External Id</th>
+      <th>Tipo</th>
+      <th>Titulo</th>
+      <th>Mag_Type</th>
+      <th>Magnitud</th>
+      <th>Place</th>
+      <th>Fecha y Hora</th>
+      <th>Tsunami</th>
+      <th>link</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.id }}</td>
+      <td>{{ event.attributes.external_id}}</td>
+      <td>{{ event.type}}</td>
+      <td>{{ event.attributes.title }}</td>
+      <td>{{ event.attributes.mag_type }}</td>
+      <td>{{ event.attributes.magnitude }}</td>
+      <td>{{ event.attributes.place }}</td>
+      <td>{{ event.attributes.time }}</td>
+      <td>{{ event.attributes.tsunami }}</td>
+      <td><a href="{{ event.links.external_url }}" target="_blank">Link</a></td>
+      <td>{{ event.attributes.coordinates.latitude }}</td>
+      <td>{{ event.attributes.coordinates.longitude }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination" *ngIf="showpagination" >
+  <button mat-button class="custom-button"(click)="paginaAnterior()">Anterior</button>
+  <span>Página {{ paginaActual }}</span>
+  <button mat-button class="custom-button"(click)="paginaSiguiente()">Siguiente</button>
+</div>
+
+

@@ -1,0 +1,55 @@
+.table-container {
+  display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Mostrar los elementos en columna */
+    height: 150%; /* 80% del alto de la ventana */
+    border: 2px black solid;
+  box-sizing: border-box;
+  margin: auto;
+  width: 80%;
+  }
+  
+  table {
+    //width: 80%;
+    border-collapse: collapse;
+    border: 2px solid;
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  
+    tr:hover {
+      background-color: #ddd;
+    }
+  }
+  
+  .input-group {
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    gap: 8px; /* Espacio entre el título y el input */
+    border: 2px ;
+}
+
+.input-group h4 {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 16px; /* Ajusta el tamaño de fuente según necesites */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.number-search  {
+    flex: 1; /* El input ocupa el espacio restante */
+    padding: 5px 10px; /* Ajusta el relleno para un mejor toque visual */
+    font-size: 16px; /* Asegura que el texto dentro del input sea legible */
+    padding-top: 10px;
+}

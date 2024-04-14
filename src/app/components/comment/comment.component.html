@@ -1,0 +1,40 @@
+<h1>Listar-Eliminar</h1>
+<div class="containerListar">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>featureId</th>
+        <th>comentario</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comments of comentarios">
+        <td>{{ comments.id }}</td>
+        <td>{{ comments.earthquake_id }}</td>
+        <td><p>{{ comments.body }}</p></td> 
+        <td><button mat-raised-button color="warn" (click)="eliminarComentario(comments.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h1>Crear Comentarios</h1>
+<div class="container" >
+        <h4>Nuevo Comentario</h4>
+        <mat-label>Feature ID</mat-label>
+        <input matInput #featureIdInput type="text" [(ngModel)]="featureId" placeholder="Ingrese el ID de la característica" (keypress)="validarNumero($event)">
+        <mat-label>Comentario</mat-label>
+        <textarea matInput [(ngModel)]="commentText" placeholder="Escribe tu comentario aquí"></textarea>
+      <button mat-raised-button color="primary" (click)="crearNuevoComentario(featureId,commentText)">Crear Comentario</button>
+    </div>
+
+    <h1>Modificar Comentario</h1>
+    <div class="container">
+      <mat-label>Comentario ID</mat-label>
+      <input matInput #commentIdInput type="text"[(ngModel)]="commentId"  placeholder="Ingrese el ID del comentario" (keypress)="validarNumero($event)" >
+      <mat-label>Nuevo Texto</mat-label>
+      <textarea matInput #newText [(ngModel)]="commentBody"   placeholder="Escriba el nuevo texto del comentario"></textarea>
+      <button mat-raised-button color="primary" (click)="modificarComentario(commentIdInput.value, newText.value)">Modificar Comentario</button>
+    </div>
+    
