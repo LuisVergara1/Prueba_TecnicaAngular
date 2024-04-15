@@ -21,8 +21,11 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 3. Inicia la aplicacion :
  - el servicio debe levantarse en el puerto 4200 
     para coincidir con el Cors del backend
+- En caso de levantar el backend en otro Puerto modificar el archivo enviromments/environments.ts
+- Si el servicio se inicia en un puerto diferente al 4200
+  debe modificar el Cors en el Backend con el nuevo puerto a usar
     ```bash
-        npm start
+        ng serve
 
 ## Funcionalidades
 - Listar y Paginar Features : Muestra una Lista entre 1 y 12 Features por pagina con la posibilidad de Filtrar datos
@@ -34,7 +37,7 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 
 ## Mejoras o Faltantes
 - Mejor control de la experiencia de Usuario
-- Mostrar mensajes de alerta para cuando el usuario haga algo mal
+- Mostrar mensajes de alerta para errores
 - Hacer la web Responsive  
 
 
