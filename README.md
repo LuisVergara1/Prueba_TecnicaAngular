@@ -1,27 +1,40 @@
-# PtAngular
+# Proyecto Angular Prueba Técnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+Este proyecto es parte de una prueba técnica y consiste en un frontend desarrollado con Angular que interactúa con un backend mediante una API REST.
 
-## Development server
+## Configuración del Entorno
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- El FrotEnd se desplegó en un servidor VPS utilizando Docker y Docker Compose.
+  - Sitio web : [pt.luisvergara.dev](https://pt.luisvergara.dev)
+  - La web estará disponible hasta 30 de abril .
+  - Repositorio GitHub del Backend: [GitHub Front URL](https://github.com/LuisVergara1/Prueba_TecnicaAngular)
 
-## Code scaffolding
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clona este repositorio en tu máquina local:
+    ```bash
+   git clone https://github.com/tu-usuario/proyecto-angular.git
 
-## Build
+2. Instala las Dependencias:
+    ```bash
+        npm install
+3. Inicia la aplicacion :
+ - el servicio debe levantarse en el puerto 4200 
+    para coincidir con el Cors del backend
+    ```bash
+        npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Funcionalidades
+- Listar y Paginar Features : Muestra una Lista entre 1 y 12 Features por pagina con la posibilidad de Filtrar datos
+- Listar Comentarios: Muestra una lista de comentarios obtenidos desde el backend.
+- Agregar Comentario: Permite agregar un nuevo comentario a través de un formulario.
+- Modificar Comentario: Permite editar un comentario existente.
+- Eliminar Comentario: Permite eliminar un comentario existente.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Mejoras o Faltantes
+- Mejor control de la experiencia de Usuario
+- Mostrar mensajes de alerta para cuando el usuario haga algo mal
+- Hacer la web Responsive  
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
