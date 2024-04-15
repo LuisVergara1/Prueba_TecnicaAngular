@@ -7,13 +7,13 @@ Este proyecto es parte de una prueba técnica y consiste en un frontend desarrol
 - El FrotEnd se desplegó en un servidor VPS utilizando Docker y Docker Compose.
   - Sitio web : [pt.luisvergara.dev](https://pt.luisvergara.dev)
   - La web estará disponible hasta 30 de abril .
-  - Repositorio GitHub del Backend: [GitHub Front URL](https://github.com/LuisVergara1/Prueba_TecnicaAngular)
+  - Repositorio GitHub del Backend: [GitHub Front URL](https://github.com/LuisVergara1/Prueba_Tecnica)
 
 Para ejecutar el proyecto localmente, sigue estos pasos:
 
 1. Clona este repositorio en tu máquina local:
     ```bash
-   git clone https://github.com/tu-usuario/proyecto-angular.git
+   git clone https://github.com/LuisVergara1/Prueba_TecnicaAngular.git
 
 2. Instala las Dependencias:
     ```bash
@@ -21,9 +21,10 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 3. Inicia la aplicacion :
  - el servicio debe levantarse en el puerto 4200 
     para coincidir con el Cors del backend
-- En caso de levantar el backend en otro Puerto modificar el archivo enviromments/environments.ts
 - Si el servicio se inicia en un puerto diferente al 4200
   debe modificar el Cors en el Backend con el nuevo puerto a usar
+- En caso de levantar el backend en otro Puerto modificar la URL en el archivo enviromments/environments.ts
+
     ```bash
         ng serve
 
