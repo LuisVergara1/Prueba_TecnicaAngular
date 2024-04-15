@@ -19,11 +19,11 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
     ```bash
         npm install
 3. Inicia la aplicacion :
- - el servicio debe levantarse en el puerto 4200 
+ - el servicio debe iniciar en el puerto 4200 
     para coincidir con el Cors del backend
 - Si el servicio se inicia en un puerto diferente al 4200
   debe modificar el Cors en el Backend con el nuevo puerto a usar
-- En caso de levantar el backend en otro Puerto modificar la URL en el archivo enviromments/environments.ts
+- En caso de iniciar el backend en otro Puerto que no sea el 3000 modificar la URL en el archivo enviromments/environments.ts
 
     ```bash
         ng serve
